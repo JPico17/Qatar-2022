@@ -51,28 +51,5 @@ public class Controlador implements ActionListener
                 vista.crearDialogoJugador();
                 this.vista.miDialogoJugador.agregarOyentesBotones(this);
             }
-            
-            if(comando.equals("M. Datos"))
-            {
-                String pais = vista.miPanelEntradaDatos.getPais();
-                String continente = vista.miPanelEntradaDatos.getContinente();
-                modelo = new Equipo(pais, continente);
-                vista.miPanelResultados.mostrarResultado("Los datos del equipo son los siguientes: \nPais = " + modelo.getPais() + "\nContinente = " + modelo.getContinente());
-                vista.miPanelOperaciones.activarBoton();
-
-                if(comando.equals("aceptar"))
-                {
-                    String nombre = vista.miDialogoJugador.getNombre();
-                    String apellido = vista.miDialogoJugador.getApellido();
-                    int edad = Integer.parseInt(vista.miDialogoJugador.getEdad());
-                    String posicion = vista.miDialogoJugador.getPosicion();
-                    int numgoles = Integer.parseInt(vista.miDialogoJugador.getNumgoles());
-                    String marcarTiSu = vista.miDialogoJugador.getmarcarTiSu();
-    
-                    modelo2 = new Jugador();
-                    vista.miPanelResultados.mostrarResultado("Datos del Jugador: \nNombre = " + modelo2.getNombre() );
-                    vista.miDialogoJugador.cerrarDialogo();  
-            }
-            }   
         }
 }

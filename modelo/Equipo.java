@@ -7,7 +7,7 @@ public class Equipo
     private String continente;
 
     //Metodos
-    public Equipo(String cPais, String continente2)
+    public Equipo(String cPais, String continente)
     {
         this.pais = cPais;
     }
