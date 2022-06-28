@@ -1,46 +1,32 @@
 package modelo;
 
-import javax.swing.JOptionPane;
-
 public class Equipo
 {
     //Atributos
-    private String nombreEquipo;
-    private int numJugadores;
-    private Jugador[] jugadores;
+    private String pais;
+    private String continente;
 
     //Metodos
-    public Equipo(String nom, int n)
+    public Equipo(String cPais, String continente2)
     {
-        nombreEquipo = nom;
-        numJugadores = n;
-        jugadores = new Jugador[n];
+        this.pais = cPais;
     }
 
-    public void cargar()
+    public String getPais() 
     {
-        for(int i=0; i< numJugadores;i++)
-        {
-            jugadores[i] = crearJugador();
-        }
+        return pais;
+    }
+    public void setPais(String pais) 
+    {
+        this.pais = pais;
     }
 
-    public Jugador crearJugador()
+    public String getContinente() 
     {
-        String nom = "";
-        int goles = 0;
-        nom = JOptionPane.showInputDialog("Nombre del jugador: ");
-        goles = Integer.parseInt(JOptionPane.showInputDialog("Goles del jugador: "));
-        return new Jugador(nom, goles);
+        return continente;
     }
-
-    public int calcularTotalGoles()
+    public void setContinente(String continente) 
     {
-        int totalGolesEquipo = 0;
-        for(int i=0; i<numJugadores; i++)
-        {
-            totalGolesEquipo = totalGolesEquipo + jugadores[i].getGoles();
-        }
-        return totalGolesEquipo;
+        this.continente = continente;
     }
 }

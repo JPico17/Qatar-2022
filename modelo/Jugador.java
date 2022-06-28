@@ -2,50 +2,72 @@ package modelo;
 
 public class Jugador
 {
-    //Atributos
+    ///Atributos
     private String nombre;
-    private int goles;
+    private int numgoles;
+    private String apellido;
+    private int edad;
+    private String posicion;
+    private String marcarTiSu;
 
     //Métodos
-    public Jugador()
+
+    public String getmarcarTiSu() 
     {
-        nombre = "";
-        goles = 0;
+        return marcarTiSu;
     }
 
-    public Jugador(String n, int g)
+    public void setmarcarTiSu(String marcarTiSu) 
     {
-        nombre = n;
-        goles = g;
+        this.marcarTiSu = marcarTiSu;
+    }
+
+    public String getPosicion() 
+    {
+        return posicion;
+    }
+
+    public void setPosicion(String posicion) 
+    {
+        this.posicion = posicion;
+    }
+     public int getEdad() 
+     {
+        return edad;
+    }
+
+    public void setEdad(int edad) 
+    {
+        this.edad = edad;
+    }
+     public String getApellido() 
+     {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) 
+    {
+        this.apellido = apellido;
+    }
+
+    
+    public int getNumgoles() 
+    {
+        return numgoles;
+    }
+
+    public void setNumgoles(int numgoles) 
+    {
+        this.numgoles = numgoles;
     }
     
-    public void setGoles(int g)
+    public void setNombre(String nombre)
     {
-        goles = g;
-    }
-
-    public int getGoles()
-    {
-        return goles;
-    }
-
-    public void setNombre(String n)
-    {
-        nombre = n;
+        this.nombre = nombre;
     }
 
     public String getNombre()
     {
         return nombre;
-    }
-
-    public void Goles()
-    {
-        setGoles(getGoles()+5);
-    }
-
-    public String toString()
-    {
-        return nombre + " con " + goles + " goles.";
     }
 }
