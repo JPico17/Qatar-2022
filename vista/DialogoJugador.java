@@ -44,81 +44,81 @@ public class DialogoJugador extends JDialog
         setLayout(null);
         
         //Creación y adición del elementos
-        lbTitulo = new JLabel("Datos del Jugador",JLabel.CENTER);
+        lbTitulo = new JLabel("Datos",JLabel.CENTER);
         lbTitulo.setFont(new Font("Arial", Font.BOLD, 25));
         lbTitulo.setBounds(10,10,280,20);
         add(lbTitulo);
         
         lbNombre= new JLabel("Nombre (JD) = ",JLabel.RIGHT);
-        lbNombre.setFont(new Font("Arial", Font.BOLD, 25));
+        lbNombre.setFont(new Font("Arial", Font.BOLD, 15));
         lbNombre.setBounds(10,50,140,20);
         add(lbNombre);
         txNombre = new JTextField();
-        txNombre.setFont(new Font("Arial", Font.BOLD, 25));
-        txNombre.setBounds(60,50,140,20);
+        txNombre.setFont(new Font("Arial", Font.BOLD, 15));
+        txNombre.setBounds(150,50,200,20);
         add(txNombre);
         
         lbApellido = new JLabel("Apellido = ",JLabel.RIGHT);
-        lbApellido.setFont(new Font("Arial", Font.BOLD, 25));
-        lbApellido.setBounds(10,80,90,20);
+        lbApellido.setFont(new Font("Arial", Font.BOLD, 15));
+        lbApellido.setBounds(10,90,140,20);
         add(lbApellido);
         txApellido = new JTextField();
         txApellido.setFont(new Font("Arial", Font.BOLD, 15));
-        txApellido.setBounds(60,50,140,20);
+        txApellido.setBounds(150,90,200,20);
         add(txApellido);
 
         lbPosicion = new JLabel("Posicion = ",JLabel.RIGHT);
         lbPosicion.setFont(new Font("Arial", Font.BOLD, 15));
-        lbPosicion.setBounds(10,140,85,20);
+        lbPosicion.setBounds(10,140,140,20);
         add(lbPosicion);
         cbPosicion = new JComboBox();
         for(int i=0; i<posicion.length;i++)
         {
             cbPosicion.addItem(posicion[i]);
         }
-        cbPosicion.setBounds(110,140,180,20);
+        cbPosicion.setBounds(150,140,200,20);
         this.add(cbPosicion);
 
         lbEdad = new JLabel("Edad = ",JLabel.RIGHT);
         lbEdad.setFont(new Font("Arial", Font.BOLD, 15));
-        lbEdad.setBounds(10,110,60,20);
+        lbEdad.setBounds(10,180,140,20);
         add(lbEdad);
         txEdad = new JTextField();
         txEdad.setFont(new Font("Arial", Font.BOLD, 15));
-        txEdad.setBounds(60,50,140,20);
+        txEdad.setBounds(150,180,200,20);
         add(txEdad);
 
         lbnumGoles = new JLabel("Goles = ",JLabel.RIGHT);
         lbnumGoles.setFont(new Font("Arial", Font.BOLD, 15));
-        lbnumGoles.setBounds(15,170,60,20);
+        lbnumGoles.setBounds(10,220,140,20);
         add(lbnumGoles);
         txnumGoles = new JTextField();
         txnumGoles.setFont(new Font("Arial", Font.BOLD, 15));
-        txnumGoles.setBounds(60,50,140,20);
+        txnumGoles.setBounds(150,220,200,20);
         add(txnumGoles);
 
         lbMarcar = new JLabel("Marcar = ",JLabel.RIGHT);
         lbMarcar.setFont(new Font("Arial", Font.BOLD, 15));
-        lbMarcar.setBounds(300,50,130,20);
+        lbMarcar.setBounds(10,260,130,20);
         add(lbMarcar);
         cbMarcar = new JComboBox();
         for(int i=0; i<marcar.length;i++)
         {
             cbMarcar.addItem(marcar[i]);
         }
-        cbMarcar.setBounds(440,50,80,20);
+        cbMarcar.setBounds(150,260,100,20);
         this.add(cbMarcar);
         
         //Boton
         btAceptar = new JButton("Aceptar");
-        btAceptar.setFont(new Font("Arial", Font.BOLD, 25));
-        btAceptar.setBounds(20,140,260,25);
+        btAceptar.setFont(new Font("Arial", Font.ITALIC, 20));
+        btAceptar.setBounds(80,290,160,25);
         btAceptar.setActionCommand("aceptar");
         add(btAceptar);
                
         //Caracteristicas de la ventana
         setTitle("Datos del Jugador");
-        setSize(600,600);
+        setSize(380,400);
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
@@ -149,7 +149,7 @@ public class DialogoJugador extends JDialog
         return txnumGoles.getText();
     }
 
-    public String getmarcarTiSu()
+    public String getMarcarTiSu()
     {
         return (String) cbMarcar.getSelectedItem();
     }
@@ -161,6 +161,6 @@ public class DialogoJugador extends JDialog
     
     public void cerrarDialogo()
     {
-        this.dispose();
-    }  
+        this.dispose(); 
+    }
 }

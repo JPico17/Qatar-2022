@@ -1,13 +1,13 @@
 package modelo;
 
+import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Jugador
 {
     ///Atributos
     private String nombre;
-    private String jugadorTitular;
-    private String jugadorSuplente;
     private int numgoles;
     private String apellido;
     private int edad;
@@ -15,8 +15,20 @@ public class Jugador
     private String marcarTiSu;
 
     //Métodos
+    public Jugador(String nom, String ape, int ed, int nGol, String pos, String mar)
+    {
+        this.nombre=nom;
+        this.apellido=ape;
+        this.edad = ed;
+        this.numgoles= nGol;
+        this.posicion = pos;
+        this.marcarTiSu = mar;
 
-    public String getmarcarTiSu() 
+
+    }
+    public Jugador() {
+    }
+    public String getMarcarTiSu() 
     {
         return marcarTiSu;
     }
@@ -74,32 +86,12 @@ public class Jugador
     {
         return nombre;
     }
-    public String getJugadorSuplente() 
-    {
-        return jugadorSuplente;
+    public static Connection getJugador() {
+        return null;
     }
-    public void setJugadorSuplente(String jugadorSuplente) 
-    {
-        this.jugadorSuplente = jugadorSuplente;
-    }
-    
-        // Declaración el ArrayList
-        //ArrayList<String> jugadorSuplente = new ArrayList<String>();
 
-        // Añadimos 10 Elementos en el ArrayList
-        //for (int i=1; i<=11; i++)
-        //{
-        //    jugadorSuplente.add("Elemento "+i); 
-        //}
-    
-        // Añadimos un nuevo elemento al ArrayList en la posición 2
-        //nombreArrayList.add(2, "Elemento 3");
-    
-        // Declaramos el Iterador e imprimimos los Elementos del ArrayList
-        //Iterator<String> nombreIterator = nombreArrayList.iterator();
-        //while(nombreIterator.hasNext())
-        //{
-        //    String elemento = nombreIterator.next();
-        //    System.out.print(elemento+" / ");
-        //}
+
+    ///________________________________________
+
+
 }

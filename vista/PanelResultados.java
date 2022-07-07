@@ -7,8 +7,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.TitledBorder;
 
-import modelo.Jugador;
-
 public class PanelResultados extends JPanel
 {
         //---------------
@@ -31,7 +29,7 @@ public class PanelResultados extends JPanel
         //Crear y agregar area de texto 
         taResultado= new JTextArea();
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(10,20,760,220);
+        spResultado.setBounds(10,20,760,280);
         this.add(spResultado);
 
         //Borde y titulo al panel 

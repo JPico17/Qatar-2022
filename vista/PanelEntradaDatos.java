@@ -22,8 +22,6 @@ public class PanelEntradaDatos extends JPanel
     private JTextField tfx;
     private JTextField tfy;
     private JTextField tfz;
-    private JTextField tfw;
-    private JTextField tfw2;
     private JComboBox cbEqipos;
     private String[] equipos = {"Qatar", "Argentina", "Alemania", "Dinamarca", "Brasil", "Serbia", "Croacia", "España", "Francia"
     , "Bélgica", "Suiza", "Inglaterra", "Holanda", "Irán", "Corea del Sur", "Canadá", "Arabia Saudí"
@@ -129,6 +127,11 @@ public class PanelEntradaDatos extends JPanel
     }
 
     public String getEquipoPertenece()
+    {
+        return tfz.getText();
+    }
+
+    public String getNumEquiposDirigidos()
     {
         return tfz.getText();
     }

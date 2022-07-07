@@ -17,10 +17,7 @@ public class VentanaPrincipal   extends JFrame
     //----------
 
     /*Método constructor*/
-    public void crearDialogoJugador()
-    {
-        miDialogoJugador = new DialogoJugador();
-    }
+    
     public VentanaPrincipal()
     {
         //Contenedor de la ventana
@@ -33,14 +30,14 @@ public class VentanaPrincipal   extends JFrame
 
         // Crear y agregar el PanelOperaciones
         miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,280,780,200);
+        miPanelOperaciones.setBounds(10,270,780,150);
         this.add(miPanelOperaciones);
 
         // Crear y agregar el PanelEntrada
         miPanelResultados = new PanelResultados();
-        miPanelResultados.setBounds(10,500,780,250);
+        miPanelResultados.setBounds(10,430,780,310);
         this.add(miPanelResultados);
-
+        
 
         // Caracteristicas de la ventana
         this.setTitle("APP Qatar 2022");
@@ -50,5 +47,9 @@ public class VentanaPrincipal   extends JFrame
         this.setResizable(false);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
+    }
+    public void crearDialogoJugador()
+    {
+        miDialogoJugador = new DialogoJugador();
     }
 }

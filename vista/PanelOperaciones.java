@@ -1,7 +1,11 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.Font;
+
 import javax.swing.BorderFactory;
+import static java.awt.Font.BOLD;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
@@ -26,17 +30,18 @@ public class PanelOperaciones extends JPanel
         this.setLayout(null);
         this.setBackground(Color.WHITE);
 
-        //crear y agregar boton hallar
-        btJugador = new JButton("Jugador");
-        btJugador.setBounds(310,40,215,60);
-        this.add(btJugador);
-        btJugador.setActionCommand("Jugador");
-
         // crear y agregar boton 
         btMosDatos = new JButton("M. Datos");
-        btMosDatos.setBounds(45,40,215,60);
+        btMosDatos.setBounds(40,40,215,60);
         this.add(btMosDatos);
         btMosDatos.setActionCommand("M. Datos");
+
+        //crear y agregar boton hallar
+        btJugador = new JButton("Jugador");
+        btJugador.setFont(new Font("Arial", BOLD, 12));
+        btJugador.setBounds(300,40,215,60);
+        this.add(btJugador);
+        btJugador.setActionCommand("Jugador");
 
         // crear y agregar boton salir
         btSalir = new JButton("Salir");
@@ -49,8 +54,19 @@ public class PanelOperaciones extends JPanel
         borde.setTitleColor(Color.RED);
         this.setBorder(borde);
     }
-    public void activarBoton()
+    
+    public void activarBotones()
     {
         btJugador.setEnabled(true);
+        btMosDatos.setEnabled(true);
+        btSalir.setEnabled(true);
     }
+
+    public void agregarOyentesBotones(ActionListener pAL)
+    {
+        btMosDatos.addActionListener(pAL);
+        btJugador.addActionListener(pAL);
+        btSalir.addActionListener(pAL);
+    }
+
 }
